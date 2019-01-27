@@ -1,0 +1,475 @@
+doctype html
+head
+  meta(charset='utf-8')
+  title CALLY LAUNDRY
+  meta(content='width=device-width, initial-scale=1.0' name='viewport')
+  meta(content='' name='keywords')
+  meta(content='' name='description')
+  // ICONS
+  link(href='/assets/home/img/favicon.ico' rel='icon')
+  // <link href="img/apple-touch-icon.png" rel="apple-touch-icon">
+  // Bootstrap CSS File
+  link(href='/assets/home/lib/bootstrap/css/bootstrap.min.css' rel='stylesheet')
+  // Libraries CSS Files
+  link(href='/assets/home/lib/font-awesome/css/font-awesome.min.css' rel='stylesheet')
+  link(href='/assets/home/lib/animate/animate.min.css' rel='stylesheet')
+  // Main Stylesheet File
+  link(href='/assets/home/css/style.css' rel='stylesheet')
+// START HEADER
+header#header
+  .container
+    #logo.pull-left
+      h1
+        a(href='#hero') CALLY LAUNDRY
+    // NAVBAR
+    nav#nav-menu-container
+      ul.nav-menu
+        li.menu-active
+          a(href='#hero') Home
+        li
+          a(href='#about') About Us
+        li
+          a(href='#services') Services
+        li
+          a(href='#team') Team
+        li
+          a(href='#contact') Contact Us
+    // END NAVBAR
+// END HEADER
+// PARALLAX SECTION
+section#hero
+  .hero-container
+    h1 Welcome to CALLY LAUNDRY
+    h2 LAUNDRY TODAY OR NAKED TOMORROW
+    a.btn-get-started(href='#' data-toggle='modal' data-target='#getStartedModal') Get Started
+// END PARALLAX EFFECT
+main#main
+  // ABOUT SECTION
+  section#about
+    .container
+      .row.about-container
+        .col-lg-6.content.order-lg-1.order-2
+          h2.title Few Words About Us
+          p
+            | Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          .icon-box.wow.fadeInUp
+            .icon
+              i.fa.fa-eye
+            h4.title
+              a(href='') VISION
+            p.description
+              | Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi
+          .icon-box.wow.fadeInUp(data-wow-delay='0.2s')
+            .icon
+              i.fa.fa-shopping-bag
+            h4.title
+              a(href='') MISSION
+            p.description
+              | Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+        .col-lg-6.background.order-lg-2.order-1.wow.fadeInRight
+  // END ABOUT
+  // FACTS SECTION
+  section#facts
+    .container.wow.fadeIn
+      .section-header
+        h3.section-titles Facts
+        p.section-descriptions
+          | Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
+      .row.counters.white-text
+        .col-lg-4.col-12.text-center
+          span(data-toggle='counter-up' style='color: white') 372
+          p Clients
+        .col-lg-4.col-12.text-center
+          span(data-toggle='counter-up' style='color: white') 87608
+          p Operating Hours
+        .col-lg-4.col-12.text-center
+          span(data-toggle='counter-up' style='color: white') 100000
+          p Clothes washed and hung
+  // END FACTS
+  // SERVICES
+  section#services
+    .container.wow.fadeIn
+      .section-header
+        h3.section-title Services
+        p.section-description MAKING LAUNDRY LESS OF A CHORE
+      .row
+        .col-lg-4.col-md-6.wow.fadeInUp(data-wow-delay='0.2s')
+          .box
+            .icon
+              a(href='')
+                i.fa.fa-bath
+            h4.title
+              a(href='') WASH AND DRY
+            p.description
+              | Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident
+        .col-lg-4.col-md-6.wow.fadeInUp(data-wow-delay='0.4s')
+          .box
+            .icon
+              a(href='')
+                i.fa.fa-cutlery
+            h4.title
+              a(href='') FOOD AND BEVERAGE
+            p.description
+              | Minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat tarad limino ata
+        .col-lg-4.col-md-6.wow.fadeInUp(data-wow-delay='0.6s')
+          .box
+            .icon
+              a(href='')
+                i.fa.fa-paper-plane
+            h4.title
+              a(href='') FULL SERVICE
+            p.description
+              | Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur
+        .col-lg-4.col-md-6.wow.fadeInUp(data-wow-delay='0.2s')
+          .box
+            .icon
+              a(href='')
+                i.fa.fa-heart
+            h4.title
+              a(href='') FRIENDLY ATTENDANTS
+            p.description
+              | Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+        .col-lg-4.col-md-6.wow.fadeInUp(data-wow-delay='0.4s')
+          .box
+            .icon
+              a(href='')
+                i.fa.fa-thumbs-up
+            h4.title
+              a(href='') HIGH QUALITY DETERGENTS
+            p.description
+              | At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque
+        .col-lg-4.col-md-6.wow.fadeInUp(data-wow-delay='0.6s')
+          .box
+            .icon
+              a(href='')
+                i.fa.fa-shopping-bag
+            h4.title
+              a(href='') CONTRACT LAUNDRY
+            p.description
+              | Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi
+  // END SERVICES
+  // CALL TO ACTION SECTION
+  section#call-to-action
+    .container.wow.fadeIn
+      .row
+        .col-lg-9.text-center.text-lg-left
+          h3.cta-title Call To Action
+          p.cta-text
+            | Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        .col-lg-3.cta-btn-container.text-center
+          a.cta-btn.align-middle(href='#') Call To Action
+  // END CALL TO ACTION
+  section#portfolio
+    .container.wow.fadeInUp
+      .section-header
+        h3.section-title Portfolio
+        p.section-description Here are some picture of our environment
+      #portfolio-wrapper.row
+        .col-lg-3.col-md-6.portfolio-item.filter-app
+          img.img-fluid(src='cally-album/1.jpg' alt='')
+          .details
+            h4 Lorem 1
+            span Lorem ipsum dolor sit.
+        .col-lg-3.col-md-6.portfolio-item.filter-web
+          img.img-fluid(src='cally-album/2.jpg' alt='')
+          .details
+            h4 Lorem 2
+            span Lorem, ipsum dolor.
+        .col-lg-3.col-md-6.portfolio-item.filter-app
+          img.img-fluid(src='cally-album/3.jpg' alt='')
+          .details
+            h4 Lorem 3
+            span Lorem, ipsum dolor.
+        .col-lg-3.col-md-6.portfolio-item.filter-card
+          img.img-fluid(src='cally-album/4.jpg' alt='')
+          .details
+            h4 Lorem 4
+            span Lorem ipsum dolor sit.
+        .col-lg-3.col-md-6.portfolio-item.filter-card
+          img.img-fluid(src='cally-album/5.jpg' alt='')
+          .details
+            h4 Lorem 5
+            span Lorem ipsum dolor sit.
+        .col-lg-3.col-md-6.portfolio-item.filter-card
+          img.img-fluid(src='cally-album/6.jpg' alt='')
+          .details
+            h4 Lorem 6
+            span Lorem ipsum dolor sit.
+        .col-lg-3.col-md-6.portfolio-item.filter-card
+          img.img-fluid(src='cally-album/7.jpg' alt='')
+          .details
+            h4 Lorem 7
+            span Lorem ipsum dolor sit.
+        .col-lg-3.col-md-6.portfolio-item.filter-card
+          img.img-fluid(src='cally-album/8.jpg' alt='')
+          .details
+            h4 Lorem 8
+            span Lorem ipsum dolor sit.
+  // TEAM SECTION
+  section#team
+    .container.wow.fadeInUp
+      .section-header
+        h3.section-title Team
+        p.section-description
+          | Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
+      .row
+        .col-lg-3.col-md-6
+          .member
+            .pic
+              img(src='/assets/home/img/team-1.jpg' alt='')
+            h4 Johnmel Frane Marco
+            span Chief Executive Officer
+            .social
+              a(href='')
+                i.fa.fa-twitter
+              a(href='')
+                i.fa.fa-facebook
+              a(href='')
+                i.fa.fa-google-plus
+              a(href='')
+                i.fa.fa-linkedin
+        .col-lg-3.col-md-6
+          .member
+            .pic
+              img(src='/assets/home/img/team-2.jpg' alt='')
+            h4 Renzhime Rustee Merdegia
+            span Product Manager
+            .social
+              a(href='')
+                i.fa.fa-twitter
+              a(href='')
+                i.fa.fa-facebook
+              a(href='')
+                i.fa.fa-google-plus
+              a(href='')
+                i.fa.fa-linkedin
+        .col-lg-3.col-md-6
+          .member
+            .pic
+              img(src='/assets/home/img/team-3.jpg' alt='')
+            h4 Some random person
+            span CTO
+            .social
+              a(href='')
+                i.fa.fa-twitter
+              a(href='')
+                i.fa.fa-facebook
+              a(href='')
+                i.fa.fa-google-plus
+              a(href='')
+                i.fa.fa-linkedin
+        .col-lg-3.col-md-6
+          .member
+            .pic
+              img(src='/assets/home/img/team-4.jpg' alt='')
+            h4 Some random person
+            span Accountant
+            .social
+              a(href='')
+                i.fa.fa-twitter
+              a(href='')
+                i.fa.fa-facebook
+              a(href='')
+                i.fa.fa-google-plus
+              a(href='')
+                i.fa.fa-linkedin
+  // END TEAM
+  // CONTACT
+  section#contact
+    .container.wow.fadeInUp
+      .section-header
+        h3.section-title Contact
+    iframe#gmap_canvas(src='https://maps.google.com/maps?q=indra%20company&t=&z=13&ie=UTF8&iwloc=&output=embed' width='100%' height='380' frameborder='0' style='border:0' allowfullscreen='')
+    .container.wow.fadeInUp.mt-5
+      .row.justify-content-center
+        .col-lg-3.col-md-4
+          .info
+            div
+              i.fa.fa-map-marker
+              p
+                | Tower 1 Rockwell Business Center, 1 Ortigas Ave
+                br
+                | Pasig, 1609 Metro Manila
+            div
+              i.fa.fa-envelope
+              p callylaundry@yourcompany.com
+            div
+              i.fa.fa-phone
+              p (02) 123 4567
+          .social-links
+            a.twitter(href='#')
+              i.fa.fa-twitter
+            a.facebook(href='#')
+              i.fa.fa-facebook
+            a.instagram(href='#')
+              i.fa.fa-instagram
+            a.google-plus(href='#')
+              i.fa.fa-google-plus
+            a.linkedin(href='#')
+              i.fa.fa-linkedin
+        .col-lg-5.col-md-8
+          .form
+            #sendmessage Your message has been sent. Thank you!
+            #errormessage
+            form.contactForm(action='' method='post' role='form')
+              .form-group
+                input#name.form-control(type='text' name='name' placeholder='Your Name' data-rule='minlen:4' data-msg='Please enter at least 4 chars')
+                .validation
+              .form-group
+                input#email.form-control(type='email' name='email' placeholder='Your Email' data-rule='email' data-msg='Please enter a valid email')
+                .validation
+              .form-group
+                input#subject.form-control(type='text' name='subject' placeholder='Subject' data-rule='minlen:4' data-msg='Please enter at least 8 chars of subject')
+                .validation
+              .form-group
+                textarea.form-control(name='message' rows='5' data-rule='required' data-msg='Please write something for us' placeholder='Message')
+                .validation
+              .text-center
+                button(type='submit') Send Message
+  // end CONTACT
+  // GET STARTED MODAL
+  #getStartedModal.modal.fade.bd-example-modal-lg(tabindex='-1' role='dialog' aria-hidden='true')
+    .modal-dialog
+      .modal-content
+        .modal-header
+          h5#exampleModalLongTitle.modal-title GET STARTED
+          button.close(type='button' data-dismiss='modal' aria-label='Close')
+            span(aria-hidden='true') &times;
+        .modal-body
+            label.sr-only(for='inlineFormInputGroupUsername2') 
+            .input-group.mb-2.mr-sm-2
+              .input-group-prepend
+                .input-group-text Username
+              input.form-control(type='text' id='username' placeholder='')
+            label.sr-only(for='inlineFormInputGroupUsername2') 
+            .input-group.mb-2.mr-sm-2
+              .input-group-prepend
+                .input-group-text Password
+              input.form-control(type='text' id='password' placeholder='')
+            a.pull-right.getRegister(href='#')
+              | No account? Register here!
+        .modal-footer
+          button.btn.btn-secondary.pull-left(type='button' data-dismiss='modal') Close
+          button.btn.btn-primary.loginButton(type='button') Login
+
+  // end GET STARTED MODAL
+  #getRegister.modal.fade.bd-example-modal-lg(tabindex='-1' role='dialog' aria-hidden='true')
+    .modal-dialog
+      .modal-content
+        .modal-header
+          h5#exampleModalLongTitle.modal-title GET STARTED
+          button.close(type='button' data-dismiss='modal' aria-label='Close')
+            span(aria-hidden='true') &times;
+        .modal-body
+            form
+              .form-row
+                .form-group.col-md-6
+                  label(for='') Name
+                  input.form-control(type='text' id='cust_name' placeholder='Name')
+                .form-group.col-md-6
+                  label(for='') Contact Number
+                  input.form-control(type='number' id='cust_contact_no' placeholder='Contact Number' max-length="11" min-lenght="11")
+                .form-group.col-md-12
+                  label(for='') Address
+                  input.form-control(type='text' id='cust_address' placeholder='Address')
+                .form-group.col-md-6
+                  label(for='') Username
+                  input.form-control(type='text' id='cust_username' placeholder='Username')
+                .form-group.col-md-6
+                  label(for='') Password
+                  input.form-control(type='password' id='cust_password' placeholder='Password')
+            br
+            a.pull-right.getLogin(href='#')
+              | Already have account? Login here!
+        .modal-footer
+          button.btn.btn-secondary.pull-left(type='button' data-dismiss='modal') Close
+          button.btn.btn-primary.submitButton(type='button') Submit
+// FOOTER
+footer#footer
+  .footer-top
+    .container
+  .container
+    .copyright
+      | &copy; 
+      strong Copyright
+      | . All Rights Reserved
+    .credits
+      | Designed by 
+      a(href='') -_-
+// end FOOTER
+a.back-to-top(href='#')
+  i.fa.fa-chevron-up
+// JS Libraries
+script(src='/assets/home/lib/jquery/jquery.min.js')
+script(src='/assets/home/lib/jquery/jquery-migrate.min.js')
+script(src='/assets/home/lib/bootstrap/js/bootstrap.bundle.min.js')
+script(src='/assets/home/lib/easing/easing.min.js')
+script(src='/assets/home/lib/wow/wow.min.js')
+script(src='/assets/home/lib/waypoints/waypoints.min.js')
+script(src='/assets/home/lib/counterup/counterup.min.js')
+script(src='/assets/home/lib/superfish/hoverIntent.js')
+script(src='/assets/home/lib/superfish/superfish.min.js')
+// Sweet Alert 2 plugin
+script(src='/assets/sweetalert/sweetalert.js')
+// Contact Form JavaScript File
+script(src='/assets/home/contactform/contactform.js')
+// Template Main Javascript File
+script(src='/assets/home/js/main.js')
+script.
+  $(document).ready(function(){
+    $('.getRegister').click(function(){
+      $('#getStartedModal').modal('hide')
+      $('#getRegister').modal('show')
+    })
+
+    $('.getLogin').click(function(){
+      $('#getStartedModal').modal('show')
+      $('#getRegister').modal('hide')
+    })
+  })
+
+//- LOGIN
+script.
+  $(document).ready(function(){
+    $('.loginButton').click(function(){
+      $.post('/customer/customer/login',{
+        username: $('#username').val(),
+        password: $('#password').val(),
+      })
+    })
+  })
+//- REGISTRATION
+script.
+  $(document).ready(function(){
+    $('.submitButton').click(function(){
+      var cust_name = $('#cust_name').val()
+      var cust_contact_no = $('#cust_contact_no').val()
+      var cust_address = $('#cust_address').val()
+      var cust_username = $('#cust_username').val()
+      var cust_password = $('#cust_password').val()
+      $.post('home/register',{
+        cust_name,
+        cust_contact_no,
+        cust_address,
+        cust_username,
+        cust_password
+      }).done(function(data){
+        if(data.alertDesc == 0) {
+         swal({
+            title: "Success",
+            text: 'Please try to login your account',
+            icon: 'success'
+          }).then(function(){
+            location.reload()
+          })
+        }
+        else {
+          swal({
+            title: "Error",
+            text: 'Please double check the fields',
+            icon: 'error'
+          })
+        }
+      })
+    })
+  })

@@ -1,64 +1,47 @@
-/**
- * We load the ExpressJS module.
- * More than just a mere framework, it is also a complementary library
- * to itself.
- */
-var express = require('express');
+var express = require('express')
+var session = require('express-session');
+var router = express.Router()
+var db = require('../../lib/database')();
+// var mid = require("../../middlewares")
+var moment = require ('moment')
 
-/**
- * Having that in mind, this is one of its robust feature, the Router.
- * You'll appreciate this when we hit RESTful API programming.
- * 
- * For more info, read this: https://expressjs.com/en/4x/api.html#router
- */
-var router = express.Router();
 
-/**
- * If you can notice, there's nothing new here except we're declaring the
- * route using the router, and not using app.use().
- */
-router.get('/', (req, res) => {
-    /**
-     * This is a TEMPORARY checker if you want to enable the database part of
-     * the app or not. In the .env file, there should be an ENABLE_DATABASE field
-     * there that should either be 'true' or 'false'.
-     */
-    if (typeof process.env.ENABLE_DATABASE !== 'undefined' && process.env.ENABLE_DATABASE === 'false') {
-        /**
-         * If the database part is disabled, then pass a blank array to the
-         * render function.
-         */
-        return render([]);
-    }
+router.get('/index',(req,res)=>{
+    res.render('home/index')
+})
 
-    /**
-     * Import the database module that is located in the lib directory, under app.
-     */
-    var db = require('../../lib/database')();
 
-    /**
-     * If the database part is enabled, then use the database module to query
-     * from the database specified in your .env file.
-     */
-    db.query('SELECT * FROM users', function (err, results, fields) {
-        /**
-         * Temporarily, if there are errors, send the error as is.
-         */
-        if (err) return res.send(err);
+// REGISTRATION
+router.post('/home/register',(req,res)=>{
+    const query = `INSERT INTO customer_tbl(cust_name, cust_contact_no, cust_address)
+    VALUE("${req.body.cust_name}","${req.body.cust_contact_no}","${req.body.cust_address}")`
 
-        /**
-         * If there are no errors, pass the results (which is an array) to the
-         * render function.
-         */
-        render(results);
-    });
+    db.query(query,(err,out)=>{
+        var cust_id = out.insertId
+        if(err){
+            var alertDesc = 1
+            res.send({alertDesc:alertDesc})
+        }
+        else{
+            const query1 = `INSERT INTO account_tbl(cust_id,username,password)
+            VALUE("${cust_id}","${req.body.cust_username}","${req.body.cust_password}")`
 
-    function render(users) {
-        res.render('home/views/index', { users: users });
-    }
-});
+            db.query(query1,(err,out)=>{
+                if(err){
+                    var alertDesc = 1
+                    const query2 = `DELETE FROM customer_tbl WHERE cust_id = "${cust_id}"`
 
-/**
- * Here we just export said router on the 'index' property of this module.
- */
-exports.index = router;
+                    db.query(query2,(err,out)=>{
+
+                    })
+                }
+                else{
+                    var alertDesc = 0 
+                    res.send({alertDesc:alertDesc})
+                }
+            })
+        }
+    })
+})
+
+exports.home = router;
