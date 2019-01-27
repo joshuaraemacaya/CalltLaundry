@@ -332,6 +332,7 @@ main#main
     .modal-dialog
       .modal-content
         .modal-header
+        form#login(method='post' action='/customer/customer/login')
           h5#exampleModalLongTitle.modal-title GET STARTED
           button.close(type='button' data-dismiss='modal' aria-label='Close')
             span(aria-hidden='true') &times;
@@ -340,12 +341,12 @@ main#main
             .input-group.mb-2.mr-sm-2
               .input-group-prepend
                 .input-group-text Username
-              input.form-control(type='text' id='username' placeholder='')
+              input.form-control(type='text' name='username' id='username' placeholder='')
             label.sr-only(for='inlineFormInputGroupUsername2') 
             .input-group.mb-2.mr-sm-2
               .input-group-prepend
                 .input-group-text Password
-              input.form-control(type='text' id='password' placeholder='')
+              input.form-control(type='text' name='password' id='password' placeholder='')
             a.pull-right.getRegister(href='#')
               | No account? Register here!
         .modal-footer
@@ -435,7 +436,17 @@ script.
       $.post('/customer/customer/login',{
         username: $('#username').val(),
         password: $('#password').val(),
+      }).done(function(data){
+        if(data==true){
+
+        location.href=`/customer`;
+        }
+        else{
+          location.href=`/home/index`
+        }
       })
+      //- $('#login').submit();
+      
     })
   })
 //- REGISTRATION
